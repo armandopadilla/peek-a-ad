@@ -10,7 +10,7 @@ These are only the APIs.
 Seed data will come from Google Places and is a Todo item.  Its simply a one off script that will run once for this prototype.
 
 #Todo
-1. Security - Needs Security love.
+1. Security - Needs Security love. For now everything will go over https. (Yes only gave myself 2-3 hours to crank this out so its mostly a time issue)
 2. AWS set up - I want to see this running somewhere.  Will purchase a domain, set up Route53, and a ec2 instance running pm2.
 3. React App Skin.
 4. Unit Tests.
@@ -29,23 +29,25 @@ Seed data will come from Google Places and is a Todo item.  Its simply a one off
 1. Redis
 
 # Endpoints
+
+## Markers
 1. 'get /v1/markers' - Fetch all the markers - example /v1/markers?miles=1&clat=&clng=
 2. 'get /v1/marker/:id' - Fetch specific marker - example /v1/marker/ID_HERE
 3. 'post /v1/marker' - Create a new Marker.
 
-  // User
-  'get /v1/user/:id' : 'UserController.fetch',
-  'post /v1/user': 'UserController.create',
+## User
+1. 'get /v1/user/:id' - Fetch Specific User
+2. 'post /v1/user' - Create a new User
 
-  // Advertiser
-  'get /v1/advertisers': 'AdvertiserController.list',
-  'post /v1/advertiser': 'AdvertiserController.create',
-  'get /v1/advertiser/:id': 'AdvertiserController.fetch',
+## Advertiser
+1. 'get /v1/advertisers' - List all Advertisers in system
+2. 'post /v1/advertiser' - Create a new Advertiser
+3. 'get /v1/advertiser/:id' - Fetch a specific Advertiser
 
-  // @todo - Award
-  //'post /v1/award'
-  'post /v1/award/new': 'AwardController.create',
-  //'post /v1/award/create-code'
+## Award
+1. 'post /v1/award' - Award points to the user
+2. 'post /v1/award/new' - Create a new Award for a specific marker
+3. 'post /v1/award/create-code' - Create a new code - used by the advertisers.
 
 
 # Some notes.
