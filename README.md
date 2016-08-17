@@ -54,14 +54,14 @@ Seed data will come from Google Places and is a Todo item.  Its simply a one off
 1. By default the app will request markers up to 1 radius so the app doesnt have to ping the backend so often.  this will reduce load a bit. Caching, will place the main data into DB but will place most popular into redis cluster.
 
 # Plan to award points.
-Iteration v1 
+## Iteration v1 
 1.  user goes to participating Starbucks
 2.  User purchases a medium iced latte per the advertising.
 3.  Starbuck DOES-X .
 4.  Starbucks hands the user a 8 digit code that has been created for this transaction.
 5.  The code is only valid for 2 minutes.
 
-What I thought about while driving home.
+## What I thought about while driving home.
 1.  Scan a bar code?  How should Starbucks update their systems to talk to our systems?
 2.  Allow the user to simply swipe it?  Nope, can’t verify that they bought anything.
 3.  Simplest solutions (i think) is to have Starbucks make a backend call to us.  We then give them a code.  They then hand that code to the customer.   The backend call must only be created during a valid purchase (I’m sure they have ways to do this on the starbucks side)
